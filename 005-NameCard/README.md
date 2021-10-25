@@ -17,7 +17,7 @@ It seems there is no problem so far. Finally, it's time to destruct all these ob
 
 ![shallowcopy](https://user-images.githubusercontent.com/48712088/138698767-d35fba2c-229d-4658-bbf4-f69be98debd0.png)
 
-Now, can you see what happens?
+Now, can you see what happened?
 
 It's natural that after four objects are constructed, four destruction will be expected.
 Unfortunally, half of them do not make it.
