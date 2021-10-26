@@ -2,4 +2,4 @@
 
 v0.3: Applied Deep Copy to classes
 
-v0.3: Specified 'const' to some functions
+v0.4: Specified 'const' to some functions
