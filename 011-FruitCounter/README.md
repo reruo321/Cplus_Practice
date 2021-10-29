@@ -55,6 +55,17 @@ In the program, Fruit-type pointer in FruitCounter class tries to call these fun
 
 ![011notvirtual](https://user-images.githubusercontent.com/48712088/139441885-0ddf44f4-ae35-4cbf-9501-f7ddc7707f19.png)
 
-Even if the Fruit-type pointer points 
+The Fruit-type pointer actually points the derived classes.
+However, the compiler would just consider the type of the pointer, concerning about the possibility that the 'Fruit' type pointer would point not only the object of derived class, but also of base class, 'Fruit'.
+Therefore, it would generate error whatever the pointer points to.
+If so, should we make and match every type of pointer to every class, to manage all of overriding functions???
 
-Two functions, int GetPrice() and void ShowInfo() in 'Fruit' and its derived classes, are virtual.
+Nope!
+The magical word 'virtual' will simply save us from this situation.
+
+Add 'virtual' in front of int GetPrice() and void ShowInfo() in 'Fruit' class.
+Then the functions in derived class the pointer points to would work adequately.
+Since 'virtual' is also inherited, every overriding function also gets 'virtual' characteristic from base.
+(Also adding 'virtual' to overriding functions would be good for programmers to check the codes, though.)
+
+![011virtual](https://user-images.githubusercontent.com/48712088/139462165-7fe811e9-58c9-4157-ba21-625665009952.png)
