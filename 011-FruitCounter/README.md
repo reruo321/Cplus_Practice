@@ -69,3 +69,20 @@ Since 'virtual' is also inherited, every overriding function also gets 'virtual'
 (Also adding 'virtual' to overriding functions would be good for programmers to check the codes, though.)
 
 ![011virtual](https://user-images.githubusercontent.com/48712088/139462165-7fe811e9-58c9-4157-ba21-625665009952.png)
+
+## Abstract Class
+
+We made the class 'Fruit' to set the base class, but we do not want 'Fruit' object itself.
+To disable compiler to generate this type of object, change the codes like these:
+      virtual int GetPrice() const = 0;
+      virtual void ShowInfo() const = 0;
+The functions are now called Pure Virtual Function, whose body is not defined.
+Furthermore, the class that has at least one pure virtual function is called Abstract Class.
+On account of its imperfectness, it prohibits to make the object.
+
+## Polymorphism
+
+It means "Same Appearance, Different Character."
+
+In this program, if Fruit-type pointer points different object, those GetPrice() and ShowInfo() work differently.
+We can say that they are the examples of polymorphism.
