@@ -74,8 +74,10 @@ Since 'virtual' is also inherited, every overriding function also gets 'virtual'
 
 We made the class 'Fruit' to set the base class, but we do not want 'Fruit' object itself.
 To disable compiler to generate this type of object, change the codes like these:
-      virtual int GetPrice() const = 0;
-      virtual void ShowInfo() const = 0;
+
+       virtual int GetPrice() const = 0;
+       virtual void ShowInfo() const = 0;
+       
 The functions are now called Pure Virtual Function, whose body is not defined.
 Furthermore, the class that has at least one pure virtual function is called Abstract Class.
 On account of its imperfectness, it prohibits to make the object.
