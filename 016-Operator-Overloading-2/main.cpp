@@ -40,7 +40,7 @@ Point& operator~(Point& ref) {
 int main() {
 	Point pos(1, 2);
 
-	cout << "-----¿¹½Ã-----" << endl;
+	cout << "-----ì˜ˆì‹œ-----" << endl;
 	++pos;
 	pos.ShowPosition();
 	--pos;
@@ -51,12 +51,12 @@ int main() {
 	--(--pos);
 	pos.ShowPosition();
 	
-	cout << "-----1¹ø ¹®Á¦-----" << endl;
+	cout << "-----1ë²ˆ ë¬¸ì œ-----" << endl;
 	pos.ShowPosition();
 	Point pos2 = -pos;
 	pos2.ShowPosition();
 	
-	cout << "-----2¹ø ¹®Á¦-----" << endl;
+	cout << "-----2ë²ˆ ë¬¸ì œ-----" << endl;
 	pos.ShowPosition();
 	Point pos3 = ~pos;
 	pos3.ShowPosition();
