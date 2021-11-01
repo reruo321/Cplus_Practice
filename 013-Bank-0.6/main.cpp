@@ -29,7 +29,7 @@ int main()
             bank->ExitBank();
             return 0;
         default:
-            cout << "¼ıÀÚ 1~5¸¦ ÀÔ·ÂÇÏ¼¼¿ä." << endl;
+            cout << "ìˆ«ìëŠ” 1~5ë¥¼ ì…ë ¥í•˜ì„¸ìš”." << endl;
             break;
         }
     }
