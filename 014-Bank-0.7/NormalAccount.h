@@ -19,7 +19,7 @@ public:
 
     void UserInfo() const {
         Account::UserInfo();
-        cout << "ÀÌÀÚÀ²: " << interest << endl;
+        cout << "ì´ìžìœ¨: " << interest << endl;
     }
 
     int GetInterest() const {
