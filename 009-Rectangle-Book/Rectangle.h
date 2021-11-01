@@ -14,7 +14,7 @@ public:
 	Rectangle(const int row, const int col) : row(row), col(col) {}
 	
 	void ShowAreaInfo() const {
-		cout << "¸éÀû: " << row * col << endl;
+		cout << "ë©´ì : " << row * col << endl;
 	}
 };
 
@@ -39,9 +39,9 @@ public:
 		strcpy(this->isbn, isbn);
 	}
 	void ShowBookInfo() const {
-		cout << "Á¦¸ñ: " << title << endl;
+		cout << "ì œëª©: " << title << endl;
 		cout << "ISBN: " << isbn << endl;
-		cout << "°¡°Ý: " << price << endl;
+		cout << "ê°€ê²©: " << price << endl;
 	}
 };
 
@@ -56,6 +56,6 @@ public:
 
 	void ShowEBookInfo() const {
 		ShowBookInfo();
-		cout << "ÀÎÁõÅ°: " << DRMKey << endl;
+		cout << "ì¸ì¦í‚¤: " << DRMKey << endl;
 	}
 };
