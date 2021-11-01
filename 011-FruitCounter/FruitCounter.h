@@ -15,13 +15,13 @@ public:
 			fruitList[i]->ShowInfo();
 	}
 	void GetTotalItem() const {
-		cout << "Ç°¸ñ °³¼ö: " << itemNum << "Á¾" << endl;
+		cout << "í’ˆëª© ê°œìˆ˜: " << itemNum << "ì¢…" << endl;
 	}
 	void GetTotalPrice() const {
 		int sum = 0;
 		for (int i = 0; i < itemNum; i++)
 			sum += fruitList[i]->GetPrice();
-		cout << "°úÀÏ ÃÑ °¡°Ý: " << sum << endl;
+		cout << "ê³¼ì¼ ì´ ê°€ê²©: " << sum << endl;
 	}
 	~FruitCounter() {
 		for (int i = 0; i < itemNum; i++)
