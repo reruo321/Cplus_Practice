@@ -29,7 +29,7 @@ int main()
             bank->ExitBank();
             return 0;
         default:
-            cout << "¼ıÀÚ 1~5¸¦ ÀÔ·ÂÇÏ¼¼¿ä." << endl;
+            cout << "숫자 1~5를 입력하세요." << endl;
             break;
         }
     }
