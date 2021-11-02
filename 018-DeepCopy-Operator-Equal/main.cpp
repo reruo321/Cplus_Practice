@@ -25,8 +25,8 @@ public:
 	}
 
 	void ShowPersonInfo() const {
-		cout << "이름: " << name << endl;
-		cout << "나이: " << age << endl;
+		cout << "Name: " << name << endl;
+		cout << "Age: " << age << endl;
 	}
 	~Person() {
 		delete[]name;
