@@ -31,8 +31,8 @@ double Calculator::Div(double a, double b) {
 }
 
 void Calculator::ShowOpCount() {
-	cout << "µ¡¼À: " << add;
-	cout << " »¬¼À: " << sub;
-	cout << " °ö¼À: " << mul;
-	cout << " ³ª´°¼À: " << div << endl;
+	cout << "ë§ì…ˆ: " << add;
+	cout << " ëº„ì…ˆ: " << sub;
+	cout << " ê³±ì…ˆ: " << mul;
+	cout << " ë‚˜ëˆ—ì…ˆ: " << div << endl;
 }
