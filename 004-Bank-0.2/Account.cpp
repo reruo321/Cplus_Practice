@@ -27,8 +27,8 @@ int Account::CheckMoney() const {
 
 void Account::UserInfo() const {
     cout << "\nID: " << id << endl;
-    cout << "ÀÌ¸§: " << name << endl;
-    cout << "±Ý¾×: " << money << endl;
+    cout << "이름: " << name << endl;
+    cout << "금액: " << money << endl;
 }
 
 Account::~Account() {
