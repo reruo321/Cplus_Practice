@@ -67,7 +67,7 @@ int main(void) {
 	for (int i = 0; i < arr.GetArrLen(); i++)
 //		cout << *(arr[i]);
 
-/* Should Print The Axis of Point With The Code: */
+/* Should Print The Axis of Point With This Code: */
 		cout << arr[i];
 
 	delete arr[0];
