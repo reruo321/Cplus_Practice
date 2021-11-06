@@ -5,14 +5,14 @@ using namespace std;
 
 class RowArray {
 	int* ptr;
-	int col, row;
+	int row, col;
 
 public:
-	RowArray(int x = 0, int y = 0): col(x), row(y) {
+	RowArray(int x = 0, int y = 0): row(x), col(y) {
 		ptr = new int[y];
 	}
 	int& operator[] (int y) {
-		if (y < 0 || y >= GetRow()) {
+		if (y < 0 || y >= GetCol()) {
 			cout << "Array index out of bound exception" << endl;
 			exit(1);
 		}
@@ -38,7 +38,7 @@ public:
 			arr[i] = RowArray(x, y);
 	}
 	RowArray &operator[] (int x) {
-			if (x < 0 || x >= GetCol()) {
+			if (x < 0 || x >= GetRow()) {
 				cout << "Array index out of bound exception" << endl;
 				exit(1);
 			}
