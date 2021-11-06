@@ -39,20 +39,20 @@ Hence, we have to find other ways to make it...
 
 ## My Solution
 
-There will be various answers for the problem, and I suggest a simple solution using inheritance.
+There will be various answers for the problem. I suggest a simple solution mainly using inheritance.
 
 ![022classes](https://user-images.githubusercontent.com/48712088/140599260-a8b12df5-758b-4bd7-9165-75017d2979ae.png)
 
 I set 'BoundCheck2DIntArray' as a derived class from the base, 'RowArray'.
 The base class has these variables: int row, int col, int ptr.
-'row' contains the number of rows in the array, 'col' of columns, and 'ptr' is the array for int data.
+'row' contains the number of rows in the 2D array, 'col' of columns, and 'ptr' is the array for int data.
 
 Meanwhile, 'BoundCheck2DIntArray' additionally has 'arr', which is the array for 'RowArray' objects.
 
 The constructor of 'BoundCheck2DIntArray' makes 'arr' to take 'RowArray' 'row' times,
 and each 'RowArray' gets 'ptr' with 'col' integers by RowArray(int x, int y).
 
-The key that I used in this time is the Function Overriding. Look at these codes again step by step:
+Look at these codes again step by step:
 
       (arr2d.operator[](n))[m];
       
@@ -61,7 +61,7 @@ Let's make the return type of this operator 'RowArray'.
 
       (('RETURN_VALUE').operator[])(m);
       
-Now, as you can see, 'RETURN_VALUE' is 'RowArray'. In this time, it will call the operator from 'RowArray' class.
+Now, as you can see, 'RETURN_VALUE' is 'RowArray' object. In this time, it will call the operator from 'RowArray' class.
 If you allow it to return int type, the 2D array will finally call its int values.
 Oh, of course, do not forget to check the validity of input row and column arguements!
 
