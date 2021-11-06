@@ -24,7 +24,7 @@ Oh, now you might think you should overload several operator[ ]s to get differen
 In C++, it is impossible to overload the functions whose only difference is their return types.
 The compiler finds two things when it calls the function; the name of the function, and parameter declaration.
 Therefore, it is not able to distinguish one function from the other, and then overload,
-because they have the same name and the same parameters.
+if they have the same name and the same parameters, no matter what they return.
 
 For example, we can not overload these together:
 
