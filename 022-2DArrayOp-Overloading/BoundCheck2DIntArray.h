@@ -12,7 +12,7 @@ public:
 		ptr = new int[y];
 	}
 	int& operator[] (int y) {
-		if (y >= GetRow()) {
+		if (y < 0 || y >= GetRow()) {
 			cout << "Array index out of bound exception" << endl;
 			exit(1);
 		}
@@ -38,7 +38,7 @@ public:
 			arr[i] = RowArray(x, y);
 	}
 	RowArray &operator[] (int x) {
-			if (x >= GetCol()) {
+			if (x < 0 || x >= GetCol()) {
 				cout << "Array index out of bound exception" << endl;
 				exit(1);
 			}
