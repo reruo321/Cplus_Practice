@@ -19,18 +19,18 @@ Class, Information Hiding, Encapsulation, Initializer, Constructor, Destructor
 
 ### 005-006
 
-Copy Constructor, Shallow Copy, Deep Copy, and Const
+Copy Constructor, Shallow Copy, Deep Copy, Const
 
 ★ Document is on [Example 005](https://github.com/reruo321/Cplus_Practice/tree/main/005-NameCard).
 
 ### 007-014
 
-Inheritance, Overriding, Abstraction, Polymorphism, and Virtual Function
+Inheritance, Overriding, Abstraction, Polymorphism, Virtual Function
 
 ★ Document is on [Example 011](https://github.com/reruo321/Cplus_Practice/tree/main/011-FruitCounter).
 
-### 015-023
+### 015-025
 
-Operator Overloading
+Operator Overloading, Smart Pointer, Functor
 
 ★ Document is on [Example 022](https://github.com/reruo321/Cplus_Practice/tree/main/022-2DArrayOp-Overloading).
