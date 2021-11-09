@@ -2,6 +2,7 @@
 
 #pragma once
 #include "Account.h"
+#include "BankingCommonDecl.h"
 
 typedef Account* ACCOUNT_PTR;
 
@@ -13,7 +14,7 @@ class BoundCheckAccountPtrArray
 	BoundCheckAccountPtrArray(const BoundCheckAccountPtrArray &arr){}
 	BoundCheckAccountPtrArray & operator=(const BoundCheckAccountPtrArray){}
 public:
-	BoundCheckAccountPtrArray(int len=100);
+	BoundCheckAccountPtrArray(int len=BANK_SIZE);
 	ACCOUNT_PTR& operator[](int idx);
 	ACCOUNT_PTR& operator[](int idx) const;
 	int GetArrLen() const;
