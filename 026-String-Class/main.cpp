@@ -6,6 +6,9 @@ using namespace std;
 class String {
 	char* s;
 public:
+	String() {
+		s = NULL;
+	}
 	String(const char* str) {
 		s = new char[strlen(str) + 1];
 		strcpy(s, str);
