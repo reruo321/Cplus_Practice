@@ -3,7 +3,7 @@ Personal Projects for C++ Practice
 
 ## Bank Project
 
-This project is upgraded constantly as the chapters in the book is finished.
+This project is upgraded constantly as the chapters in the book are finished.
 
 ## Guideline
 
@@ -34,3 +34,7 @@ Inheritance, Overriding, Abstraction, Polymorphism, Virtual Function
 Operator Overloading, Smart Pointer, Functor
 
 ★ Document is on [Example 022](https://github.com/reruo321/Cplus_Practice/tree/main/022-2DArrayOp-Overloading).
+
+### 026
+
+Simple String Class Using Operator Overloading
