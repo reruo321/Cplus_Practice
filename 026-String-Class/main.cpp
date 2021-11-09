@@ -51,12 +51,14 @@ public:
 	~String() {
 		delete[]s;
 	}
-	friend istream& operator>>(istream& is, const String& ref);
+	friend istream& operator>>(istream& is, String& ref);
 	friend ostream& operator<<(ostream &os, const String& ref);
 };
 
-istream& operator>>(istream& is, const String& ref) {
-	is >> ref.s;
+istream& operator>>(istream& is, String& ref) {
+	char buffer[100];
+	is >> buffer;
+	ref = String(buffer);
 	return is;
 }
 ostream& operator<<(ostream &os, const String& ref) {
