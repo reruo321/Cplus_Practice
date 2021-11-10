@@ -10,11 +10,11 @@ to all member functions from a class template, when you separate their definitio
 (For example, I divided 'BoundCheckArray.cpp' from 'BoundCheckArray.h' in this project.)
   
 Moreover, if you DO have distinct .cpp file that contains the definition of member functions,
-you must add
+you must
   
       #include "BoundCheckArray.cpp"
   
-to your main.cpp, or the compiler will think the information for class template is not enough.
+include it to your main.cpp, or the compiler will think the information for class template is not enough.
 
 A translation unit is the basic unit of compilation in C++,
 and it consists of the contents of a single source file. (+(in)directly included header files)
