@@ -22,4 +22,4 @@ Because of this, even if all files in a project are compiled simultaneously, the
 while it compiles one.
 
 Therefore, the compiler does not take a look at 'BoundCheckArray.cpp' that contains the definition of member functions from the class template, when compiling 'main.cpp' in the project.
-By including the source file, the information of template will be given to compiler, and then no further errors.
+By including the source file, the information of template will be given to the compiler, and then no further errors.
