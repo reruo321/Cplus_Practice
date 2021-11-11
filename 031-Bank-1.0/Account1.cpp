@@ -49,6 +49,6 @@ int Account::CheckID() const {
 
 void Account::UserInfo() const {
     cout << "\nID: " << id << endl;
-    cout << "�̸�: " << name << endl;
-    cout << "�ݾ�: " << money << endl;
+    cout << "ÀÌ¸§: " << name << endl;
+    cout << "±Ý¾×: " << money << endl;
 }
