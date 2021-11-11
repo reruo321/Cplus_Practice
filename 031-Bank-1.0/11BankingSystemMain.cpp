@@ -32,7 +32,7 @@ int main()
             bank->ExitBank();
             return 0;
         default:
-            cout << "¼ıÀÚ 1~5¸¦ ÀÔ·ÂÇÏ¼¼¿ä." << endl;
+            cout << "Â¼Ã½Ã€Ãš 1~5Â¸Â¦ Ã€Ã”Â·Ã‚Ã‡ÃÂ¼Â¼Â¿Ã¤." << endl;
             break;
         }
     }
