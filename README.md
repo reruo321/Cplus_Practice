@@ -39,8 +39,12 @@ Operator Overloading, Smart Pointer, Functor
 
 Simple String Class Using Operator Overloading
 
-### 028-
+### 028-031
 
-Template, Function Template, Class Template
+Template, Function Template, Class Template, Class Template Specialization, Static in Template
 
 ★ Document is on [Example 029](https://github.com/reruo321/Cplus_Practice/tree/main/029-BoundCheckArray-Template)
+
+### 032-
+
+Exception Handling, Try-Catch-Throw
