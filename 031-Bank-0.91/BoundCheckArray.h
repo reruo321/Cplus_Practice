@@ -1,4 +1,4 @@
-/* Version 1.0 */
+/* Version 0.91 */
 
 #pragma once
 
@@ -19,14 +19,14 @@ public:
 	}
 	T& operator[](int idx) {
 		if (idx < 0 || idx >= arrlen) {
-			cout << "Àß¸øµÈ °èÁÂ¼ø¹ø Á¢±ÙÀÔ´Ï´Ù." << endl;
+			cout << "ìž˜ëª»ëœ ê³„ì¢Œìˆœë²ˆ ì ‘ê·¼ìž…ë‹ˆë‹¤." << endl;
 			exit(1);
 		}
 		return arr[idx];
 	}
 	T& operator[](int idx) const {
 		if (idx < 0 || idx >= arrlen) {
-			cout << "Àß¸øµÈ °èÁÂ¼ø¹ø Á¢±ÙÀÔ´Ï´Ù." << endl;
+			cout << "ìž˜ëª»ëœ ê³„ì¢Œìˆœë²ˆ ì ‘ê·¼ìž…ë‹ˆë‹¤." << endl;
 			exit(1);
 		}
 		return arr[idx];
