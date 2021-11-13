@@ -22,13 +22,13 @@ public:
 
         switch (creditRank) {
         case CREDIT_RANK::RANK_A:
-            cout << "½Å¿ëµî±Þ: A" << endl;
+            cout << "ì‹ ìš©ë“±ê¸‰: A" << endl;
             break;
         case CREDIT_RANK::RANK_B:
-            cout << "½Å¿ëµî±Þ: B" << endl;
+            cout << "ì‹ ìš©ë“±ê¸‰: B" << endl;
             break;
         case CREDIT_RANK::RANK_C:
-            cout << "½Å¿ëµî±Þ: C" << endl;
+            cout << "ì‹ ìš©ë“±ê¸‰: C" << endl;
             break;
         }
 
