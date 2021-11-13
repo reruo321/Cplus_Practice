@@ -7,6 +7,8 @@ The book I used to study is "열혈 C++ 프로그래밍" by 윤성우.
 
 This project has upgraded as the chapters in the book are finished.
 
+001, 004, 006, 013, 014, 025, 027, 031, 035
+
 ## Guideline
 
 ### 001
