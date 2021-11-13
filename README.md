@@ -1,9 +1,11 @@
 # Cplus_Practice
 Personal Projects for C++ Practice
 
+The book I used to study is "열혈 C++ 프로그래밍" by 윤성우.
+
 ## Bank Project
 
-This project is upgraded constantly as the chapters in the book are finished.
+This project has upgraded as the chapters in the book are finished.
 
 ## Guideline
 
@@ -45,6 +47,10 @@ Template, Function Template, Class Template, Specialization, Static in Template
 
 ★ Document is on [Example 029](https://github.com/reruo321/Cplus_Practice/tree/main/029-BoundCheckArray-Template)
 
-### 032-
+### 032-035
 
 Exception Handling, Try-Catch-Throw
+
+### 036-
+
+C++ Casting
