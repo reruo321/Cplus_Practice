@@ -16,18 +16,18 @@ int Bank::Menu() const {
 
 MENU_AGAIN:
     cout << "\n-----Menu-----" << endl;
-    cout << "1. °èÁÂ°³¼³" << endl;
-    cout << "2. ÀÔ    ±Ý" << endl;
-    cout << "3. Ãâ    ±Ý" << endl;
-    cout << "4. °èÁÂÁ¤º¸ ÀüÃ¼ Ãâ·Â" << endl;
-    cout << "5. ÇÁ·Î±×·¥ Á¾·á" << endl;
-    cout << "¼±ÅÃ: ";
+    cout << "1. ê³„ì¢Œê°œì„¤" << endl;
+    cout << "2. ìž…    ê¸ˆ" << endl;
+    cout << "3. ì¶œ    ê¸ˆ" << endl;
+    cout << "4. ê³„ì¢Œì •ë³´ ì „ì²´ ì¶œë ¥" << endl;
+    cout << "5. í”„ë¡œê·¸ëž¨ ì¢…ë£Œ" << endl;
+    cout << "ì„ íƒ: ";
     cin >> sel;
 
     if (!cin.good()) {
         cin.clear();
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
-        cout << "¼ýÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä." << endl;
+        cout << "ìˆ«ìžë¥¼ ìž…ë ¥í•˜ì„¸ìš”." << endl;
         goto MENU_AGAIN;
     }
 
@@ -43,9 +43,9 @@ void Bank::Make() {
     int interest;
     int creditRank;
 
-    cout << "[°èÁÂÁ¾·ù¼±ÅÃ]" << endl;
-    cout << "1. º¸Åë¿¹±Ý°èÁÂ 2. ½Å¿ë½Å·Ú°èÁÂ" << endl;
-    cout << "¼±ÅÃ: ";
+    cout << "[ê³„ì¢Œì¢…ë¥˜ì„ íƒ]" << endl;
+    cout << "1. ë³´í†µì˜ˆê¸ˆê³„ì¢Œ 2. ì‹ ìš©ì‹ ë¢°ê³„ì¢Œ" << endl;
+    cout << "ì„ íƒ: ";
 
 TYPE_AGAIN:
     cin >> accountType;
@@ -53,44 +53,44 @@ TYPE_AGAIN:
     if (!cin.good()) {
         cin.clear();
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
-        cout << "°èÁÂÁ¾·ù´Â ¹øÈ£·Î ÀÔ·ÂÇÏ¼¼¿ä." << endl;
+        cout << "ê³„ì¢Œì¢…ë¥˜ëŠ” ë²ˆí˜¸ë¡œ ìž…ë ¥í•˜ì„¸ìš”." << endl;
         goto TYPE_AGAIN;
     }
 
     if (accountType == ACCOUNT_TYPE::NORMAL) {
-        cout << "[º¸Åë¿¹±Ý°èÁÂ °³¼³]" << endl;
+        cout << "[ë³´í†µì˜ˆê¸ˆê³„ì¢Œ ê°œì„¤]" << endl;
     }
 
     else if (accountType == ACCOUNT_TYPE::HIGH_CREDIT) {
-        cout << "[½Å¿ë½Å·Ú°èÁÂ °³¼³]" << endl;
+        cout << "[ì‹ ìš©ì‹ ë¢°ê³„ì¢Œ ê°œì„¤]" << endl;
     }
 
     else {
-        cout << "¹øÈ£´Â 1°ú 2 Áß ¼±ÅÃÇÏ¼¼¿ä." << endl;
+        cout << "ë²ˆí˜¸ëŠ” 1ê³¼ 2 ì¤‘ ì„ íƒí•˜ì„¸ìš”." << endl;
         goto TYPE_AGAIN;
     }
 
-    cout << "°èÁÂID: ";
+    cout << "ê³„ì¢ŒID: ";
 ID_AGAIN:
     cin >> input_id;
 
     if (!cin.good()) {
         cin.clear();
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
-        cout << "ID´Â ¼ýÀÚ·Î ÀÔ·ÂÇÏ¼¼¿ä." << endl;
+        cout << "IDëŠ” ìˆ«ìžë¡œ ìž…ë ¥í•˜ì„¸ìš”." << endl;
         goto ID_AGAIN;
     }
 
     for (int i = 0; i < total_id; i++) {
         if (this->Acc[i]->CheckID() == input_id) {
-            cout << "Áßº¹µÈ IDÀÔ´Ï´Ù. ´Ù½Ã ÀÔ·ÂÇÏ¼¼¿ä." << endl;
+            cout << "ì¤‘ë³µëœ IDìž…ë‹ˆë‹¤. ë‹¤ì‹œ ìž…ë ¥í•˜ì„¸ìš”." << endl;
             goto ID_AGAIN;
         }
     }
 
-    cout << "ÀÌ¸§: ";
+    cout << "ì´ë¦„: ";
     cin >> input_name;
-    cout << "ÀÔ±Ý¾×: ";
+    cout << "ìž…ê¸ˆì•¡: ";
 
 MONEY_AGAIN:
     cin >> input_money;
@@ -98,11 +98,11 @@ MONEY_AGAIN:
     if (!cin.good()) {
         cin.clear();
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
-        cout << "ÀÔ±Ý¾×Àº ¼ýÀÚ·Î ÀÔ·ÂÇÏ¼¼¿ä." << endl;
+        cout << "ìž…ê¸ˆì•¡ì€ ìˆ«ìžë¡œ ìž…ë ¥í•˜ì„¸ìš”." << endl;
         goto MONEY_AGAIN;
     }
 
-    cout << "ÀÌÀÚÀ²: ";
+    cout << "ì´ìžìœ¨: ";
 
 INTEREST_AGAIN:
     cin >> interest;
@@ -110,7 +110,7 @@ INTEREST_AGAIN:
     if (!cin.good()) {
         cin.clear();
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
-        cout << "ÀÌÀÚÀ²Àº ¼ýÀÚ·Î ÀÔ·ÂÇÏ¼¼¿ä." << endl;
+        cout << "ì´ìžìœ¨ì€ ìˆ«ìžë¡œ ìž…ë ¥í•˜ì„¸ìš”." << endl;
         goto INTEREST_AGAIN;
     }
 
@@ -120,7 +120,7 @@ INTEREST_AGAIN:
 
     else if (accountType == ACCOUNT_TYPE::HIGH_CREDIT) {
 
-        cout << "½Å¿ëµî±Þ(1toA, 2toB, 3toC): ";
+        cout << "ì‹ ìš©ë“±ê¸‰(1toA, 2toB, 3toC): ";
 
     RANK_AGAIN:
         cin >> creditRank;
@@ -128,7 +128,7 @@ INTEREST_AGAIN:
         if (!cin.good()) {
             cin.clear();
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
-            cout << "½Å¿ëµî±ÞÀº ¼ýÀÚ·Î ÀÔ·ÂÇÏ¼¼¿ä." << endl;
+            cout << "ì‹ ìš©ë“±ê¸‰ì€ ìˆ«ìžë¡œ ìž…ë ¥í•˜ì„¸ìš”." << endl;
             goto RANK_AGAIN;
         }
 
@@ -143,13 +143,13 @@ INTEREST_AGAIN:
             this->Acc[total_id++] = new HighCreditAccount(input_id, input_name, input_money, interest, CREDIT_RANK::RANK_C);
             break;
         default:
-            cout << "½Å¿ëµî±ÞÀº 1~3 Áß ¹øÈ£·Î ÀÔ·ÂÇÏ¼¼¿ä." << endl;
+            cout << "ì‹ ìš©ë“±ê¸‰ì€ 1~3 ì¤‘ ë²ˆí˜¸ë¡œ ìž…ë ¥í•˜ì„¸ìš”." << endl;
             goto RANK_AGAIN;
             break;
         }
     }
 
-    cout << "\n-----°èÁÂ°³¼³-----" << endl;
+    cout << "\n-----ê³„ì¢Œê°œì„¤-----" << endl;
     this->Acc[total_id-1]->UserInfo();
 
 }
@@ -162,7 +162,7 @@ void Bank::Deposit() {
     int money;
     bool idExist = false;
 
-    cout << "ID¸¦ ÀÔ·ÂÇÏ¼¼¿ä: " << endl;
+    cout << "IDë¥¼ ìž…ë ¥í•˜ì„¸ìš”: " << endl;
 DEPID_AGAIN:
 
     idExist = false;
@@ -171,7 +171,7 @@ DEPID_AGAIN:
     if (!cin.good()) {
         cin.clear();
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
-        cout << "ID´Â ¼ýÀÚ·Î ÀÔ·ÂÇÏ¼¼¿ä." << endl;
+        cout << "IDëŠ” ìˆ«ìžë¡œ ìž…ë ¥í•˜ì„¸ìš”." << endl;
         goto DEPID_AGAIN;
     }
 
@@ -183,45 +183,45 @@ DEPID_AGAIN:
     }
 
     if (idExist == false) {
-        cout << "Á¸ÀçÇÏÁö ¾Ê´Â IDÀÔ´Ï´Ù." << endl;
+        cout << "ì¡´ìž¬í•˜ì§€ ì•ŠëŠ” IDìž…ë‹ˆë‹¤." << endl;
         return;
     }
 
     this->Acc[i]->UserInfo();
 
-    cout << "\n°í°´Á¤º¸°¡ ¸Â½À´Ï±î? (y/n) : ";
+    cout << "\nê³ ê°ì •ë³´ê°€ ë§žìŠµë‹ˆê¹Œ? (y/n) : ";
 YN_AGAIN:
     cin >> yesno;
 
     if (yesno == 'y') {
-        cout << "ÀÔ±Ý¾×À» ÀÔ·ÂÇÏ½Ê½Ã¿À: ";
+        cout << "ìž…ê¸ˆì•¡ì„ ìž…ë ¥í•˜ì‹­ì‹œì˜¤: ";
     DEPOSIT_AGAIN:
         cin >> money;
 
         if (!cin.good()) {
             cin.clear();
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
-            cout << "ÀÔ±Ý¾×Àº ¼ýÀÚ·Î ÀÔ·ÂÇÏ¼¼¿ä." << endl;
+            cout << "ìž…ê¸ˆì•¡ì€ ìˆ«ìžë¡œ ìž…ë ¥í•˜ì„¸ìš”." << endl;
             goto DEPOSIT_AGAIN;
         }
 
         if (money < 0) {
-            cout << "ÀÔ±Ý¾×À» ´Ù½Ã ÀÔ·ÂÇÏ½Ê½Ã¿À: ";
+            cout << "ìž…ê¸ˆì•¡ì„ ë‹¤ì‹œ ìž…ë ¥í•˜ì‹­ì‹œì˜¤: ";
             goto DEPOSIT_AGAIN;
         }
         this->Acc[i]->AddMoney(money);
         this->Acc[i]->UserInfo();
 
-        cout << "ÀÔ±ÝÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù." << endl;
+        cout << "ìž…ê¸ˆì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤." << endl;
     }
 
     else if (yesno == 'n') {
-        cout << "ID¸¦ ´Ù½Ã ÀÔ·ÂÇÏ½Ê½Ã¿À." << endl;
+        cout << "IDë¥¼ ë‹¤ì‹œ ìž…ë ¥í•˜ì‹­ì‹œì˜¤." << endl;
         goto DEPID_AGAIN;
     }
 
     else {
-        cout << "y ¶Ç´Â nÀ» ÀÔ·ÂÇÏ½Ê½Ã¿À." << endl;
+        cout << "y ë˜ëŠ” nì„ ìž…ë ¥í•˜ì‹­ì‹œì˜¤." << endl;
         goto YN_AGAIN;
     }
 
@@ -235,7 +235,7 @@ void Bank::Withdraw() {
     int money;
     bool idExist = false;
 
-    cout << "ID¸¦ ÀÔ·ÂÇÏ¼¼¿ä: " << endl;
+    cout << "IDë¥¼ ìž…ë ¥í•˜ì„¸ìš”: " << endl;
 WITHID_AGAIN:
 
     idExist = false;
@@ -244,7 +244,7 @@ WITHID_AGAIN:
     if (!cin.good()) {
         cin.clear();
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
-        cout << "ID´Â ¼ýÀÚ·Î ÀÔ·ÂÇÏ¼¼¿ä." << endl;
+        cout << "IDëŠ” ìˆ«ìžë¡œ ìž…ë ¥í•˜ì„¸ìš”." << endl;
         goto WITHID_AGAIN;
     }
 
@@ -256,50 +256,50 @@ WITHID_AGAIN:
     }
 
     if (idExist == false) {
-        cout << "Á¸ÀçÇÏÁö ¾Ê´Â IDÀÔ´Ï´Ù." << endl;
+        cout << "ì¡´ìž¬í•˜ì§€ ì•ŠëŠ” IDìž…ë‹ˆë‹¤." << endl;
         return;
     }
 
     this->Acc[i]->UserInfo();
 
-    cout << "\n°í°´Á¤º¸°¡ ¸Â½À´Ï±î? (y/n) : ";
+    cout << "\nê³ ê°ì •ë³´ê°€ ë§žìŠµë‹ˆê¹Œ? (y/n) : ";
 YN_AGAIN:
     cin >> yesno;
 
     if (yesno == 'y') {
-        cout << "Ãâ±Ý¾×À» ÀÔ·ÂÇÏ½Ê½Ã¿À: ";
+        cout << "ì¶œê¸ˆì•¡ì„ ìž…ë ¥í•˜ì‹­ì‹œì˜¤: ";
     WITHDRAW_AGAIN:
         cin >> money;
 
         if (!cin.good()) {
             cin.clear();
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
-            cout << "Ãâ±Ý¾×Àº ¼ýÀÚ·Î ÀÔ·ÂÇÏ¼¼¿ä." << endl;
+            cout << "ì¶œê¸ˆì•¡ì€ ìˆ«ìžë¡œ ìž…ë ¥í•˜ì„¸ìš”." << endl;
             goto WITHDRAW_AGAIN;
         }
 
         if (money < 0) {
-            cout << "Ãâ±Ý¾×À» ´Ù½Ã ÀÔ·ÂÇÏ½Ê½Ã¿À: ";
+            cout << "ì¶œê¸ˆì•¡ì„ ë‹¤ì‹œ ìž…ë ¥í•˜ì‹­ì‹œì˜¤: ";
             goto WITHDRAW_AGAIN;
         }
 
         else if (money > this->Acc[i]->CheckMoney()) {
-            cout << "±Ý¾×ÀÌ ºÎÁ·ÇÕ´Ï´Ù. Ãâ±Ý¾×À» ´Ù½Ã ÀÔ·ÂÇÏ½Ê½Ã¿À: ";
+            cout << "ê¸ˆì•¡ì´ ë¶€ì¡±í•©ë‹ˆë‹¤. ì¶œê¸ˆì•¡ì„ ë‹¤ì‹œ ìž…ë ¥í•˜ì‹­ì‹œì˜¤: ";
             goto WITHDRAW_AGAIN;
         }
 
         this->Acc[i]->WithdrawMoney(money);
         this->Acc[i]->UserInfo();
-        cout << "Ãâ±ÝÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù." << endl;
+        cout << "ì¶œê¸ˆì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤." << endl;
     }
 
     else if (yesno == 'n') {
-        cout << "ID¸¦ ´Ù½Ã ÀÔ·ÂÇÏ½Ê½Ã¿À." << endl;
+        cout << "IDë¥¼ ë‹¤ì‹œ ìž…ë ¥í•˜ì‹­ì‹œì˜¤." << endl;
         goto WITHID_AGAIN;
     }
 
     else {
-        cout << "y ¶Ç´Â nÀ» ÀÔ·ÂÇÏ½Ê½Ã¿À." << endl;
+        cout << "y ë˜ëŠ” nì„ ìž…ë ¥í•˜ì‹­ì‹œì˜¤." << endl;
         goto YN_AGAIN;
     }
 }
@@ -307,23 +307,23 @@ YN_AGAIN:
 void Bank::All_UserInfo() const {
 
     if (total_id == 0) {
-        cout << "\nµî·ÏµÈ °í°´ÀÌ ¾ø½À´Ï´Ù." << endl;
+        cout << "\në“±ë¡ëœ ê³ ê°ì´ ì—†ìŠµë‹ˆë‹¤." << endl;
         return;
     }
     else
-        cout << "\n-----°í°´¸ñ·Ï-----" << endl;
+        cout << "\n-----ê³ ê°ëª©ë¡-----" << endl;
 
     for (int i = 0; i < total_id; i++)
         this->Acc[i]->UserInfo();
 
 }
 void Bank::ExitBank() {
-    cout << "ÀÌ¿ëÇØÁÖ¼Å¼­ °¨»çÇÕ´Ï´Ù." << endl<< endl;
-    cout << "°í°´´ÔÀÇ Á¤º¸¸¦ ¾ÈÀüÇÏ°Ô ¼Ò¸ê Ã³¸®ÇÕ´Ï´Ù..." << endl;
+    cout << "ì´ìš©í•´ì£¼ì…”ì„œ ê°ì‚¬í•©ë‹ˆë‹¤." << endl<< endl;
+    cout << "ê³ ê°ë‹˜ì˜ ì •ë³´ë¥¼ ì•ˆì „í•˜ê²Œ ì†Œë©¸ ì²˜ë¦¬í•©ë‹ˆë‹¤..." << endl;
 
     for (int i = 0; i < total_id; i++) {
         delete Acc[i];
-        cout << i << "¹øÂ° °èÁÂÁ¤º¸¸¦ Ã³¸®ÇÏ¿´½À´Ï´Ù." << endl;
+        cout << i << "ë²ˆì§¸ ê³„ì¢Œì •ë³´ë¥¼ ì²˜ë¦¬í•˜ì˜€ìŠµë‹ˆë‹¤." << endl;
     }
 }
 
