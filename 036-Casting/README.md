@@ -51,5 +51,19 @@ If the base class is polymorphic, in other words if it has one or more virtual f
 
 ![036dynamicpoly](https://user-images.githubusercontent.com/48712088/141687427-b4111095-6cfb-4c8e-8c0b-d590d55572c7.png)
 
-The first conversion becomes okay, but the second one makes the result pointer to be NULL.
-After examining the outcomes from Static Casting, let me explain this casting.
+The first conversion now becomes okay, but the second one makes the result pointer to be NULL.
+After examining the outcomes from Static Casting, let me give more explanation for this.
+
+## 2. Static Casting
+
+Static Casting allows both base → derived and derived → base type conversions, but the programmer should be charge of the results.
+The grammar for this cast is the same as the dynamic one.
+
+    static_cast<TYPE>(expr)
+
+![036static](https://user-images.githubusercontent.com/48712088/141688069-453e0a70-acd7-436e-893f-8157ceed0bfd.png)
+
+With the programmer's carelessness, the second one produced the issue.
+
+While casting a Dynamic one, the compiler creates binary code to check the safety during the program runtime, so it guarantees stable casts.
+Meanwhile, Static Casting does not ensure the safety, but its execution speed is faster since it skips the safety examination.
