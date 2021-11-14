@@ -4,7 +4,7 @@ The program presents four casting operators in C++.
 
 ## Program Explanation
 
-Class 'Animal' has its derived class, 'Pig'. They have polymorphic version, 'VirtualAnimal' and 'VirtualPig', which have a virtual member function.
+Class 'Animal' has its derived class, 'Pig'. They have polymorphic version, 'VirtualAnimal' and 'VirtualPig', which have at least one virtual member function.
 
 Examples on C-Style Casting, Dynamic Casting, and Static Casting is to test three cases:
 
@@ -30,6 +30,26 @@ The problems are:
 
 Additionally, the compiler also does not know whether the cast in the first case is deliberate or not.
 This case can be programmer's intention, since the pointer was originally created to point to the derived object, and then was converted to the derived-typed pointer by his/her codes.
-However, in the perspective of conversion process, if he/she created the pointer as a derived one at the beginning, casting would be unnecessary.
+However, in the perspective of conversion process, if he/she had created the pointer as a derived one at the beginning, casting would have been unnecessary.
 Because of this controversial situation, these new four operators are provided to use in C++; Dynamic Casting, Static Casting, Const Casting, and Reinterpret Casting.
 
+## 1. Dynamic Casting
+
+Dynamic Casting only allows to convert derived-class-typed pointer or reference to base type.
+The operator can be used as this form:
+
+    dynamic_cast<TYPE>(expr)
+
+![036dynamic](https://user-images.githubusercontent.com/48712088/141686882-8c2b06b5-6a78-4ba2-82d8-962b16b29862.png)
+
+The first and the second casts are not possible because they try to change the types to base → derived.
+By the way, there's a way to make them to work.
+
+## 1-i. Dynamic Casting with Polymorphic Class
+
+If the base class is polymorphic, in other words if it has one or more virtual functions, the base-typed pointer or reference data can be derived-typed.
+
+![036dynamicpoly](https://user-images.githubusercontent.com/48712088/141687427-b4111095-6cfb-4c8e-8c0b-d590d55572c7.png)
+
+The first conversion becomes okay, but the second one makes the result pointer to be NULL.
+After examining the outcomes from Static Casting, let me explain this casting.
