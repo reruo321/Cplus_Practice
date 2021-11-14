@@ -8,9 +8,9 @@ Class 'Animal' has its derived class, 'Pig'. They have polymorphic version, 'Vir
 
 Examples on C-Style Casting, Dynamic Casting, and Static Casting is to test three cases:
 
-  1. Casts Base*-typed pointer that points derived object, to derived*-typed one.
-  2. Casts Base*-typed pointer that points base object, to derived*-typed one.
-  3. Casts Derived*-typed pointer that points derived object, to base*-typed one.
+  1. Casts Base*-type pointer that points Derived object, to Derived*-typed one.
+  2. Casts Base*-type pointer that points Base object, to Derived*-typed one.
+  3. Casts Derived*-type pointer that points Derived object, to Base*-type one.
 
 ## ※ Old C-Style Casting
 
@@ -25,17 +25,17 @@ It is very powerful cast operator to change every type forcibly, but it may caus
 The weight output in the second case results in garbage value.
 The problems are:
 
-  1. Even if it points to base-typed object, it tries to call member function in the derived class. (Logical Error)
+  1. Even if it points to base-type object, it tries to call member function in the derived class. (Logical Error)
   2. The base object being pointed has no member, 'weight'. Therefore, calling it will cause the garbage.
 
 Additionally, the compiler also does not know whether the cast in the first case is deliberate or not.
-This case can be programmer's intention, since the pointer was originally created to point to the derived object, and then was converted to the derived-typed pointer by his/her codes.
+This case can be programmer's intention, since the pointer was originally created to point to the derived object, and then was converted to the derived-type pointer by his/her codes.
 However, in the perspective of conversion process, if he/she had created the pointer as a derived one at the beginning, casting would have been unnecessary.
 Because of this controversial situation, these new four operators are provided to use in C++; Dynamic Casting, Static Casting, Const Casting, and Reinterpret Casting.
 
 ## 1. Dynamic Casting
 
-Dynamic Casting only allows to convert derived-class-typed pointer or reference to base type.
+Dynamic Casting only allows to convert derived-class-type pointer or reference to base type.
 The operator can be used as this form:
 
     dynamic_cast<TYPE>(expr)
@@ -45,14 +45,14 @@ The operator can be used as this form:
 The first and the second casts are not possible because they try to change the types to base → derived.
 By the way, there's a way to make them to work.
 
-## 1-i. Dynamic Casting with Polymorphic Class
+### 1-a. Dynamic Casting with Polymorphic Class
 
-If the base class is polymorphic, in other words if it has one or more virtual functions, the base-typed pointer or reference data can be derived-typed.
+If the base class is polymorphic, in other words if it has one or more virtual functions, the base-type pointer or reference data can be derived-type.
 
 ![036dynamicpoly](https://user-images.githubusercontent.com/48712088/141687427-b4111095-6cfb-4c8e-8c0b-d590d55572c7.png)
 
 The first conversion now becomes okay, but the second one makes the result pointer to be NULL.
-After examining the outcomes from Static Casting, let me give more explanation for this.
+Static Casting is similar, but they treat the safety issue in different ways. Let me give more explanation below.
 
 ## 2. Static Casting
 
@@ -65,5 +65,25 @@ The grammar for this cast is the same as the dynamic one.
 
 With the programmer's carelessness, the second one produced the issue.
 
-While casting a Dynamic one, the compiler creates binary code to check the safety during the program runtime, so it guarantees stable casts.
-Meanwhile, Static Casting does not ensure the safety, but its execution speed is faster since it skips the safety examination.
+While casting as Dynamic, the compiler creates binary code to check the safety during the program runtime, so it guarantees stable casts.
+Meanwhile, Static Casting does not ensure the safety, but it is faster since it skips the examination.
+Thus, programmers can choose Static Casting for higher execution speed, even some cases where Dynamic one can be the option too.
+
+### 2-a. Static Casting with C++ Basic Data Types
+
+Static Casting can be also used to convert the data of C++ basic types.
+
+![036staticdivision](https://user-images.githubusercontent.com/48712088/141691913-f9889269-dedd-4190-a917-b277da3061f7.png)
+
+For example, if you want ( 20 / 3 ) to be a real number division, you need to convert 20 into double-type data.
+Instead of doing
+
+    double result = (double)20/3;
+    
+Utilize the Static Casting.
+    
+    double result = static_cast<double>(20)/3;
+    
+Static Casting is safer to use than C-type casting, because the latter can cause a bigger disaster, such as converting the value of const. (by using pointer and reference)
+
+## 3. Const Casting
