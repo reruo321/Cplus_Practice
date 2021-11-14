@@ -5,7 +5,7 @@ The book I used to study is "열혈 C++ 프로그래밍" by 윤성우.
 
 ## Bank Project
 
-This project has upgraded as the chapters in the book are finished.
+This project has been upgraded as the chapters in the book are finished.
 
 Project is on: 001, 004, 006, 013, 014, 025, 027, 031, 035
 
@@ -53,6 +53,8 @@ Template, Function Template, Class Template, Specialization, Static in Template
 
 Exception Handling, Try-Catch-Throw
 
-### 036-
+### 036
 
-C++ Casting
+C++ Casting, Dynamic Casting, Static Casting, Const Casting, Reinterpret Casting
+
+★ Document is on [Example 036]
