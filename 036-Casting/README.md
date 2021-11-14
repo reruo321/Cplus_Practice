@@ -29,7 +29,7 @@ The problems are:
   2. The base object being pointed has no member, 'weight'. Therefore, calling it will cause the garbage.
 
 Additionally, the compiler also does not know whether the cast in the first case is deliberate or not.
-This case can be programmer's intention, since the pointer was originally created to point to the derived object, and then was converted to the derived-typed pointer.
+This case can be programmer's intention, since the pointer was originally created to point to the derived object, and then was converted to the derived-typed pointer by his/her codes.
 However, in the perspective of conversion process, if he/she created the pointer as a derived one at the beginning, casting would be unnecessary.
 Because of this controversial situation, these new four operators are provided to use in C++; Dynamic Casting, Static Casting, Const Casting, and Reinterpret Casting.
 
