@@ -57,7 +57,7 @@ Exception Handling, Try-Catch-Throw
 
 C++ Casting, Dynamic Casting, Static Casting, Const Casting, Reinterpret Casting
 
-★ Document is on [Example 036]
+★ Document is on [Example 036](https://github.com/reruo321/Cplus_Practice/tree/main/036-Casting)
 
 ### End of Book
 
