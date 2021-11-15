@@ -87,3 +87,14 @@ Utilize the Static Casting.
 Static Casting is safer to use than C-type casting, because the latter can cause a bigger disaster, such as converting the value of const. (by using pointer and reference)
 
 ## 3. Const Casting
+
+Const Casting is the operator that is able to remove the constant nature (or volatile nature) of pointer or reference temporaily.
+
+    const_cast<TYPE>(expr)
+
+It is useful when the const-type data needs to be passed to a non-const type function argument.
+
+![036const](https://user-images.githubusercontent.com/48712088/141774239-7f61c495-eb8d-4c52-b114-b184e66add66.png)
+
+The compiler makes the error if const-typed char or int tries to be an argument of void ShowConstData(char * str, int &i, int &ii).
+Putting it with const_cast would solve this problem.
