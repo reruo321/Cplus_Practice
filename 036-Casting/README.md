@@ -98,3 +98,14 @@ It is useful when the const-type data needs to be passed to a non-const type fun
 
 The compiler makes the error if const-typed char or int tries to be an argument of void ShowConstData(char * str, int &i, int &ii).
 Putting it with const_cast would solve this problem.
+
+## 4. Reinterpret Casting
+
+Reinterpret Casting converts a pointer to any other types of pointer, no matter the what the relations of the types or classes are. It also changes the types between int ↔ pointer.
+
+    reinterpret_cast<TYPE>(expr)
+
+![036reinterpret](https://user-images.githubusercontent.com/48712088/141793852-38f1c400-2cfe-4602-87b8-a18e37193329.png)
+
+This is the second most dangerous cast, but it is useful in some special conditions
+when receiving data as a pointer in the packet telecommunication, or interfacing with opaque data types.
