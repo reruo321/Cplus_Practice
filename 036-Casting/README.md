@@ -8,9 +8,9 @@ Class 'Animal' has its derived class, 'Pig'. They have polymorphic version, 'Vir
 
 Examples on C-Style Casting, Dynamic Casting, and Static Casting is to test three cases:
 
-  1. Casts Base*-type pointer that points Derived object, to Derived*-typed one.
-  2. Casts Base*-type pointer that points Base object, to Derived*-typed one.
-  3. Casts Derived*-type pointer that points Derived object, to Base*-type one.
+  1. Base*-type pointer (pointing a Derived object) ▶ Derived*-type pointer
+  2. Base*-type pointer (pointing a Base object) ▶ Derived*-type pointer
+  3. Derived*-type pointer (pointing a Derived object) ▶ Base*-type pointer
 
 ## ※ Old C-Style Casting
 
@@ -18,7 +18,7 @@ C-Style casting looks like this:
 
     Derived * dptr = (Derived *)base;
     
-It is very powerful cast operator to change every type forcibly, but it may cause so serious problems that even compilers cannot catch the error.
+It is very powerful cast operator to change every type forcibly, but it may cause so serious problems that even compilers cannot catch.
 
 ![036ccasting](https://user-images.githubusercontent.com/48712088/141679517-41a7ade0-d642-4bc5-83c0-ac8ff7fce4ba.png)
 
@@ -80,7 +80,7 @@ Instead of doing
 
     double result = (double)20/3;
     
-Utilize the Static Casting.
+utilize the casting like this:
     
     double result = static_cast<double>(20)/3;
     
@@ -88,7 +88,7 @@ Static Casting is safer to use than C-type casting, because the latter can cause
 
 ## 3. Const Casting
 
-Const Casting is the operator that is able to remove the constant nature (or volatile nature) of pointer or reference temporaily.
+Const Casting is the operator that is able to remove the constant nature (or volatile nature) of pointer or reference temporarily.
 
     const_cast<TYPE>(expr)
 
@@ -96,12 +96,12 @@ It is useful when the const-type data needs to be passed to a non-const type fun
 
 ![036const](https://user-images.githubusercontent.com/48712088/141774239-7f61c495-eb8d-4c52-b114-b184e66add66.png)
 
-The compiler makes the error if const-typed char or int tries to be an argument of void ShowConstData(char * str, int &i, int &ii).
+The compiler makes the error if const-type char or int tries to be an argument of void ShowConstData(char * str, int &i, int &ii).
 Putting it with const_cast would solve this problem.
 
 ## 4. Reinterpret Casting
 
-Reinterpret Casting converts a pointer to any other types of pointer, no matter the what the relations of the types or classes are. It also changes the types between int ↔ pointer.
+Reinterpret Casting converts a pointer to any other types of pointer, no matter the what the relations of the types or classes are. It can also change the types between int ↔ pointer.
 
     reinterpret_cast<TYPE>(expr)
 
