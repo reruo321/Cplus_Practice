@@ -62,3 +62,7 @@ C++ Casting, Dynamic Casting, Static Casting, Const Casting, Reinterpret Casting
 ### End of Book
 
 C++ Standard, STL
+
+STL(Standard Template Library) is a major C++ library to provide algorithms, containers, functions, and iterators as templates.
+
+I started to record some STL things I used for my project on [here](https://github.com/reruo321/CPP-STL-Practice), while searching the Internet.
